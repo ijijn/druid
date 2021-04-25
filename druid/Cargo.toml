@@ -46,7 +46,24 @@ dxt = ["druid-shell/dxt"]
 hdr = ["druid-shell/hdr"]
 
 # Remember to update this when changing an image feature.
-image-all = ["image", "svg", "png", "jpeg", "jpeg_rayon", "gif", "bmp", "ico", "tiff", "webp", "pnm", "dds", "tga", "farbfeld", "dxt", "hdr"]
+image-all = [
+    "image",
+    "svg",
+    "png",
+    "jpeg",
+    "jpeg_rayon",
+    "gif",
+    "bmp",
+    "ico",
+    "tiff",
+    "webp",
+    "pnm",
+    "dds",
+    "tga",
+    "farbfeld",
+    "dxt",
+    "hdr",
+]
 
 [dependencies]
 druid-shell = { version = "0.7.0", default-features = false, path = "../druid-shell" }
@@ -65,10 +82,10 @@ instant = { version = "0.1.6", features = ["wasm-bindgen"] }
 
 # Optional dependencies
 im = { version = "15.0.0", optional = true }
-usvg = { version = "0.12.0", optional = true }
+usvg = { version = "0.14.1", optional = true }
 
 [target.'cfg(target_arch="wasm32")'.dependencies]
-tracing-wasm = { version = "0.1.0" }
+tracing-wasm = { version = "0.2.0" }
 console_error_panic_hook = { version = "0.1.6" }
 
 [dev-dependencies]
